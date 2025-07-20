@@ -35,7 +35,10 @@ const allowedOrigins = [
   "http://192.168.1.11:5173",
   "http://192.168.1.11:1000",
   "http://192.168.100.99:5173",
+  "http://192.168.56.1:5173",
+  "http://192.168.155.117:5173"
 ];
+
 app.use(cors({
   origin: (origin, cb) => {
     if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
